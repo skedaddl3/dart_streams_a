@@ -5,7 +5,7 @@ import 'dart:html';
 */
 void main() {
   final Element? button = querySelector('button');
-  final Element? input = querySelector('input');
+  final input = querySelector("input") as InputElement;
 
   /*
     Previous Code
