@@ -5,7 +5,11 @@ import 'dart:html';
 */
 void main() {
   final Element? button = querySelector('button');
-  final input = querySelector("input") as InputElement;
+
+  //  final Element? input = querySelector('input'); Old Code
+  //  changing type annotation causes error
+
+  final input = querySelector("input") as InputElement; // refactored code
 
   /*
     Previous Code
@@ -18,6 +22,7 @@ void main() {
 
   button!.onClick.take(4).where((event) => input.value == 'banana').listen(
       // error on .value even with ! null check
+      // fixed using refactoring at variable declaration line 8
       (event) => print('You got it'),
       onDone: () => print('Nope bad guesses'));
 }
