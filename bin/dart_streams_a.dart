@@ -5,7 +5,6 @@ import 'dart:html';
 */
 void main() {
   final Element? button = querySelector('button');
-
   //  final Element? input = querySelector('input'); Old Code
   //  changing type annotation causes error
 
